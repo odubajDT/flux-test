@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: podtato-kubectl-dev
+  name: podtato-kubectl-prod
   annotations:
     keptn.sh/lifecycle-toolkit: "enabled"
 ---
@@ -9,7 +9,7 @@ apiVersion: lifecycle.keptn.sh/v1beta1
 kind: KeptnAppContext
 metadata:
   name: podtato-head
-  namespace: podtato-kubectl-dev
+  namespace: podtato-kubectl-prod
 spec:
   preDeploymentTasks:
     - failing-task
@@ -18,7 +18,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: podtato-head-entry
-  namespace: podtato-kubectl-dev
+  namespace: podtato-kubectl-prod
   labels:
     app: podtato-head
 spec:
@@ -51,7 +51,7 @@ apiVersion: lifecycle.keptn.sh/v1beta1
 kind: KeptnTaskDefinition
 metadata:
   name: failing-task
-  namespace: podtato-kubectl-dev
+  namespace: podtato-kubectl-prod
 spec:
   deno:
     inline:

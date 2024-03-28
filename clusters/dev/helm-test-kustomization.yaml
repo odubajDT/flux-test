@@ -13,6 +13,6 @@ spec:
     kind: GitRepository
     name: flux-test
     namespace: flux-system
-  targetNamespace: podtato-kubectl
+  targetNamespace: podtato-kubectl-dev
   timeout: 3m0s
   wait: true
