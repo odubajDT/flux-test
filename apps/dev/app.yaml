@@ -5,7 +5,7 @@ metadata:
   annotations:
     keptn.sh/lifecycle-toolkit: "enabled"
 ---
-apiVersion: lifecycle.keptn.sh/v1
+apiVersion: lifecycle.keptn.sh/v1beta1
 kind: KeptnAppContext
 metadata:
   name: podtato-head
@@ -47,7 +47,7 @@ spec:
             - name: PODTATO_PORT
               value: "9000"
 ---
-apiVersion: lifecycle.keptn.sh/v1
+apiVersion: lifecycle.keptn.sh/v1beta1
 kind: KeptnTaskDefinition
 metadata:
   name: failing-task
