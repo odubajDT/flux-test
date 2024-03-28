@@ -12,6 +12,7 @@ spec:
   sourceRef:
     kind: GitRepository
     name: helm-test
+    namespace: flux-system
   targetNamespace: podtato-kubectl
   timeout: 3m0s
   wait: true
